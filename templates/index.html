@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Traffic Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename='videos/traffic-video.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <h1>Optimize Traffic Flow with AI</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="videos">Upload Your Traffic Videos (4 files):</label>
+            <input type="file" name="videos" id="videos" multiple required>
+            <button type="submit">Upload and Analyze</button>
+        </form>
+        <div id="processing">
+            <p>Processing videos, it may take a few minutes...</p>
+        </div>
+    </div>
+</body>
+</html>

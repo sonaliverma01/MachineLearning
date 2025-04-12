@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 20
+names: ['CNG', 'ambulance', 'bus', 'cargo_van', 'coach_bus', 'cycle', 'delivery_van', 'double_deck', 'fuel_truck', 'human', 'microbus', 'minibus', 'motorcycle', 'pickup', 'police_car', 'power_scooter', 'private_car', 'rickshaw', 'truck', 'van']
+
+roboflow:
+  workspace: thesis-part-2
+  project: vehicle_detection_yolov7
+  version: 4
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/thesis-part-2/vehicle_detection_yolov7/dataset/4

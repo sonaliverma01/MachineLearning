@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Optimization Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Optimization Results</h1>
+        {% if results %}
+            <div class="results">
+                {% for direction, time in results.items() %}
+                    <p class="result-item"><strong>Green light for {{ direction }}: {{ time }} seconds</strong></p>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No vehicles detected.</p>
+        {% endif %}
+        <a href="{{ url_for('index') }}">Upload More Videos</a>
+    </div>
+    {% for direction, filename in videos.items() %}
+    <video class="video-corner {{ direction }}" autoplay muted loop>
+        <source src="{{ url_for('uploaded_file', filename=filename) }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    {% endfor %}
+</body>
+</html>
