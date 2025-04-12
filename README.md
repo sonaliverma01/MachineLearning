@@ -57,6 +57,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 This project is licensed under the MIT License.
-
-## Contact
-For any questions or inquiries, please contact **_Dev Akshat_** at devakshatsrivastava@gmail.com or dm687@snu.edu.in.
